@@ -60,7 +60,7 @@ function SkillCategory({ category, index }) {
     >
       <div className="flex items-center gap-3 mb-4">
         <category.icon className="text-primary w-5 h-5" />
-        <h3 className="text-white font-semibold text-base">{category.title}</h3>
+        <h3 className="text-gray-900 font-semibold text-base">{category.title}</h3>
       </div>
       <div className="flex flex-wrap gap-2">
         {category.skills.map((skill, i) => (
@@ -69,7 +69,7 @@ function SkillCategory({ category, index }) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.3, delay: i * 0.05 }}
-            className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary/90 border border-primary/20 font-medium"
+            className="text-xs px-3 py-1.5 rounded-full bg-rose-50 text-primary border border-rose-100 font-medium"
           >
             {skill}
           </motion.span>
@@ -90,7 +90,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             My <span className="text-gradient">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />

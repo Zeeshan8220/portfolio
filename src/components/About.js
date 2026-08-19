@@ -66,7 +66,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             About <span className="text-gradient">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
@@ -79,14 +79,14 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-gray-300 leading-relaxed text-base sm:text-lg mb-6">
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
               Final-year BS Artificial Intelligence student with proven ability
               to architect and deploy production-grade full-stack AI applications.
               Experienced in building end-to-end systems — from machine learning
               pipelines and computer vision models to RESTful APIs and interactive
               frontends.
             </p>
-            <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
+            <p className="text-gray-500 leading-relaxed text-base sm:text-lg">
               Proficient in Python, FastAPI, React, TypeScript, SQL, and Docker
               deployment. Passionate about applying AI to solve real-world
               problems across fintech, healthcare, and automation.
@@ -106,10 +106,10 @@ export default function About() {
                 className="glass-card p-5 sm:p-6 hover:!border-primary/30 cursor-default"
               >
                 <item.icon className="text-primary w-7 h-7 mb-3" />
-                <h3 className="text-white font-semibold mb-2 text-sm sm:text-base">
+                <h3 className="text-gray-900 font-semibold mb-2 text-sm sm:text-base">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -131,10 +131,10 @@ export default function About() {
               className="text-center glass-card p-5 sm:p-8"
             >
               <Icon className="text-primary w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-3" />
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
                 {value}
               </div>
-              <div className="text-gray-400 text-xs sm:text-sm">{label}</div>
+              <div className="text-gray-500 text-xs sm:text-sm">{label}</div>
             </motion.div>
           ))}
         </motion.div>

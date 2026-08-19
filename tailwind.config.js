@@ -10,8 +10,8 @@ module.exports = {
       colors: {
         primary: "#F43F5E",
         secondary: "#8B5CF6",
-        "bg-dark": "#0A0A0F",
-        "bg-darker": "#050507",
+        "bg-dark": "#F5F5F0",
+        "bg-darker": "#EDEDEA",
       },
       animation: {
         "gradient-x": "gradient-x 3s ease infinite",

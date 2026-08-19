@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiChevronDown } from "react-icons/fi";
 
@@ -33,36 +34,60 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-4xl mx-auto px-4 text-center"
+        className="relative z-10 max-w-5xl mx-auto px-4 text-center"
       >
-        <motion.p
+        <motion.div
           variants={itemVariants}
-          className="text-primary font-medium text-lg mb-4 tracking-wider"
+          className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-8"
         >
-          Hello, I&apos;m
-        </motion.p>
+          <div className="text-center lg:text-left">
+            <motion.p
+              variants={itemVariants}
+              className="text-primary font-medium text-lg mb-4 tracking-wider"
+            >
+              Hello, I&apos;m
+            </motion.p>
 
-        <motion.h1
-          variants={itemVariants}
-          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight"
-        >
-          <span className="text-gradient-animated">Zeeshan Ahmad Afzal</span>
-        </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-gray-900"
+            >
+              <span className="text-gradient-animated">Zeeshan Ahmad Afzal</span>
+            </motion.h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-xl sm:text-2xl text-gray-300 font-medium mb-4"
-        >
-          AI Engineer | Full-Stack Developer | Computer Vision
-        </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-xl sm:text-2xl text-gray-600 font-medium mb-4"
+            >
+              AI Engineer | Full-Stack Developer | Computer Vision
+            </motion.p>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-gray-400 max-w-xl mx-auto mb-8 text-base sm:text-lg leading-relaxed"
-        >
-          Architecting production-grade AI applications — from ML pipelines and
-          computer vision models to RESTful APIs and interactive frontends.
-        </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-gray-500 max-w-xl mb-8 text-base sm:text-lg leading-relaxed"
+            >
+              Architecting production-grade AI applications — from ML pipelines and
+              computer vision models to RESTful APIs and interactive frontends.
+            </motion.p>
+          </div>
+
+          <motion.div
+            variants={itemVariants}
+            className="relative"
+          >
+            <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl shadow-rose-500/10 border-2 border-white">
+              <Image
+                src="/my pic.jpeg"
+                alt="Zeeshan Ahmad Afzal"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl -z-10 blur-sm" />
+          </motion.div>
+        </motion.div>
 
         <motion.div
           variants={itemVariants}
@@ -76,7 +101,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="glass text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+            className="bg-white text-gray-700 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-all duration-300 border border-black/10 shadow-sm"
           >
             Contact Me
           </a>

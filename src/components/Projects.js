@@ -5,6 +5,15 @@ import { FiGithub, FiExternalLink, FiFolder } from "react-icons/fi";
 
 const projects = [
   {
+    title: "Clinical Vision Copilot",
+    subtitle: "Multi-Agent Medical AI System",
+    description:
+      "Multi-agent AI decision-support system for medical case analysis with 6 agents (Radiology, Risk Score, Drug Interaction, Differential Diagnosis, Prescription Writer, Knowledge/RAG) orchestrated via LangGraph. Built solo with zero budget using free tools and public datasets.",
+    tech: ["Python", "LangGraph", "FastAPI", "Streamlit", "XGBoost", "Hugging Face", "ChromaDB", "Groq"],
+    github: "https://github.com/Zeeshan8220/clinical-vision-copilot",
+    live: "https://clinical-vision-copilot.streamlit.app/",
+  },
+  {
     title: "Bill Negotiator",
     subtitle: "AI Personal Finance Negotiator",
     description:
@@ -75,7 +84,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
@@ -95,47 +104,47 @@ export default function Projects() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="glass-card overflow-hidden group cursor-default"
             >
-              <div className="h-48 bg-gradient-to-br from-rose-500/10 via-primary/5 to-secondary/10 flex items-center justify-center relative overflow-hidden">
-                <FiFolder className="w-16 h-16 text-rose-500/30 group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-3">
+              <div className="h-48 bg-gradient-to-br from-rose-50 via-white to-purple-50 flex items-center justify-center relative overflow-hidden">
+                <FiFolder className="w-16 h-16 text-rose-300 group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-3">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white/10 rounded-full hover:bg-primary/30 transition-colors"
+                    className="p-2 bg-white/80 rounded-full hover:bg-primary/10 transition-colors shadow-sm"
                     aria-label="View source code"
                   >
-                    <FiGithub className="w-5 h-5 text-white" />
+                    <FiGithub className="w-5 h-5 text-gray-700" />
                   </a>
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/10 rounded-full hover:bg-primary/30 transition-colors"
+                      className="p-2 bg-white/80 rounded-full hover:bg-primary/10 transition-colors shadow-sm"
                       aria-label="View live demo"
                     >
-                      <FiExternalLink className="w-5 h-5 text-white" />
+                      <FiExternalLink className="w-5 h-5 text-gray-700" />
                     </a>
                   )}
                 </div>
               </div>
 
               <div className="p-6">
-                <p className="text-xs text-rose-500/70 font-medium mb-1 uppercase tracking-wider">
+                <p className="text-xs text-primary/70 font-medium mb-1 uppercase tracking-wider">
                   {project.subtitle}
                 </p>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium"
+                      className="text-xs px-2.5 py-1 rounded-full bg-rose-50 text-primary font-medium border border-rose-100"
                     >
                       {t}
                     </span>

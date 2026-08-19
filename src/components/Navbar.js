@@ -29,7 +29,7 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass shadow-lg shadow-rose-500/10"
+          ? "bg-white/80 backdrop-blur-xl shadow-sm border-b border-black/5"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +44,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium group"
+                className="relative text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm font-medium group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full rounded-full" />
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-gray-800 p-2"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -77,7 +77,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-white/10"
+            className="md:hidden bg-white/90 backdrop-blur-xl border-t border-black/5"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -85,7 +85,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-gray-300 hover:text-white transition-colors py-2 text-sm font-medium"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors py-2 text-sm font-medium"
                 >
                   {link.name}
                 </a>
